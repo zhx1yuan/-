@@ -13,7 +13,7 @@
 `1_datamodel\build_medical_graph.py`  
 然后运行下面路径的文件，导入新冠的医疗数据  
 `2_Rasav1\B.py`  
-导入时按照节点、关系、属性的顺序导入，相关代码已注释  
+导入时按照节点、关系、属性的顺序分别导入，相关代码已注释  
 ## 训练Rasa模型
 下面用到的命令需要在命令行中进入 `2_Rasav1\chat` 路径下使用  
 首先需要下载mitie的模型文件，放在 `\2_Rasav1\MitieNLP\total_word_feature_extractor_zh.dat`  
