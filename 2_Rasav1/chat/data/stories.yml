@@ -1,0 +1,173 @@
+version: "3.1"
+
+stories:
+
+- story: 1 search treat
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_treat
+    entities:
+    - disease: "百日咳"
+  - action: action_search_treat
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 2 search food
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_food
+    entities:
+    - disease: "百日咳"
+  - action: action_search_food
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 3 search symptom
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_symptom
+    entities:
+    - disease: "百日咳"
+  - action: action_search_symptom
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 4 search cause
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_cause
+    entities:
+    - disease: "百日咳"
+  - action: action_search_cause
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 5 search neopathy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_neopathy
+    entities:
+    - disease: "百日咳"
+  - action: action_search_neopathy
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 6 search drug
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_drug
+    entities:
+    - disease: "百日咳"
+  - action: action_search_drug
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 7 search prevention
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_prevention
+    entities:
+    - disease: "百日咳"
+  - action: action_search_prevention
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 8 search drug func
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_drug_func
+    entities:
+    - disease: "百日咳"
+  - action: action_search_drug_func
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 9 search disease treat time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_disease_treat_time
+    entities:
+    - disease: "百日咳"
+  - action: action_search_disease_treat_time
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 10 search easy_get
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_easy_get
+    entities:
+    - disease: "百日咳"
+  - action: action_search_easy_get
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 11 search disease_dept
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_disease_dept
+    entities:
+    - disease: "百日咳"
+  - action: action_search_disease_dept
+  - intent: bye
+  - action: utter_goodbye
+
+- story: 12 search food
+  steps:
+  - intent: search_food
+    entities:
+    - disease: "过敏性皮炎"
+  - action: action_search_food
+
+- story: 13 search symptom
+  steps:
+  - intent: search_symptom
+    entities:
+    - disease: "过敏性皮炎"
+  - action: action_search_symptom
+
+- story: 14 search cause
+  steps:
+  - intent: search_cause
+    entities:
+    - disease: "过敏性皮炎"
+  - action: action_search_cause
+
+- story: 15 search neopathy
+  steps:
+  - intent: search_neopathy
+    entities:
+    - disease: "过敏性皮炎"
+  - action: action_search_neopathy
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+

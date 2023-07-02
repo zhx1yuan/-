@@ -1,0 +1,1 @@
+{"py/object": "numpy.ndarray", "dtype": "<U25", "values": ["affirmative", "bye", "greet", "search_cause", "search_disease_dept", "search_disease_treat_time", "search_drug", "search_drug_func", "search_easy_get", "search_food", "search_neopathy", "search_prevention", "search_symptom", "search_treat"]}

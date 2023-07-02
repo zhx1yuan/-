@@ -1,0 +1,43 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: zh
+
+pipeline:
+  - name: "MitieNLP"                                              # 预训练词向量
+    model: "D:/1UPC/upc_zxy/cappro/Rasav1/MitieNLP/total_word_feature_extractor_zh.dat"
+  - name: "JiebaTokenizer"                                        # 文本分词器
+    dictionary_path: "JiebaTokenizer"
+  - name: "MitieFeaturizer"                                       # 文本特征化
+  - name: "RegexFeaturizer"                                       # 支持正则表达式
+  - name: "MitieEntityExtractor"                                  # 实体提取器
+  - name: "EntitySynonymMapper"                                   # 实体同义词映射
+  - name: "SklearnIntentClassifier"                               # 意图分类器
+#  - name: "FallbackClassifier"
+#    threshold: 0.7
+
+policies:
+  - name: "TEDPolicy"
+    epochs: 200
+    max_history: 4
+  - name: "MemoizationPolicy"
+    max_history: 4
+#    featurizer:
+#      - name: MaxHistoryTrackerFeaturizer
+#        max_history: 4
+#        state_featurizer:
+#          - name: LabelTokenizerSingleStateFeaturizer
+#  - name: "MappingPolicy"
+#  - name: "FallbackPolicy"
+#    nlu_threshold: 0.6
+#    core_threshold: 0.3
+#    fallback_action_name: 'action_donknow'
+  - name: RulePolicy
+    core_fallback_threshold: 0.2
+    core_fallback_action_name: action_donknow
+    enable_fallback_prediction: true
+    restrict_rules: true
+    check_for_contradictions: true
