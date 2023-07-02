@@ -6,7 +6,9 @@
 - 使用虚拟环境安装依赖`pip install -r requirements.txt`  
 ## 数据导入
 安装配置好neo4j后，需要在以下位置更改知识图谱的账号密码  
-  `  1_datamodel\build_medical_graph.py`  
+```
+1_datamodel\build_medical_graph.py
+```  
 
   `  2_Rasav1\chat\actions\actions.py`  
 
